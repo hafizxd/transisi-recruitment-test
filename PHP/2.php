@@ -9,7 +9,7 @@ function countLowerCase($str) {
         if (ctype_lower($value)) $count += 1;
     }
 
-    echo "{$str} mengandung {$count} buah huruf kecil.";
+    echo " \"{$str}\" mengandung {$count} buah huruf kecil.";
 }
 
 countLowerCase('TranSISI');
