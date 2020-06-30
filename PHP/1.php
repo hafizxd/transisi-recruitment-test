@@ -23,9 +23,9 @@ function highest($arr) {
 
     $slice = array_slice($arr, 0, 7);
     
-    $nilai_tertinggi = implode(" ", $slice);
+    $score = implode(" ", $slice);
 
-    return $nilai_tertinggi;
+    return $score;
 }
 
 
@@ -35,9 +35,9 @@ function lowest($arr) {
 
     $slice = array_slice($arr, 0, 7);
     
-    $nilai_terendah = implode(" ", $slice);
+    $score = implode(" ", $slice);
 
-    return $nilai_terendah;
+    return $score;
 }
 
 
