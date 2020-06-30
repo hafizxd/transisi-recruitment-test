@@ -41,8 +41,6 @@ function lowest($arr) {
 }
 
 
-echo "nilai rata-rata = " . mean($arr);
-echo '<br />';
-echo "7 nilai tertinggi = " . highest($arr);
-echo '<br />';
-echo "7 nilai terendah = " . lowest($arr);
+echo "nilai rata-rata = " . mean($arr) . "<br>";
+echo "7 nilai tertinggi = " . highest($arr) . "<br>";
+echo "7 nilai terendah = " . lowest($arr) . "<br>";
