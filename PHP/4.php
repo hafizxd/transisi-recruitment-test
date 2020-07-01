@@ -1,6 +1,6 @@
 <?php
 
-function numSelection() {
+function generate() {
     $count = 1;
     $type = 'a';
 
@@ -26,7 +26,7 @@ function numSelection() {
     return $selectedNumber;
 }
 
-$arr_num = numSelection();
+$arr_num = generate();
 
 ?>
 

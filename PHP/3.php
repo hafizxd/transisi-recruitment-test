@@ -2,27 +2,36 @@
 
 function putComma($arr, $wordCount) {
     $str = '';
+    $count = 0;
 
-    foreach ($arr as $key => $value) {
-        $count = $key + 1;
+    foreach ($arr as $word) {
+        $count++;
 
-        $str = (($count) % $wordCount == 0) && ($count !== count($arr)) ? $str . $value . ', ' : $str . $value . ' ';   
+        $str = ($count % $wordCount == 0) && ($count !== count($arr)) ? $str . $word . ', ' : $str . $word . ' ';   
     }
 
     return $str;
 }
 
-function printGram($str) {
-    $arr = explode(" ", strtolower($str));
+function printGram($input) {
+    $arr = explode(" ", strtolower($input));
 
     $unigram = putComma($arr, 1);
     $bigram = putComma($arr, 2);
     $trigram = putComma($arr, 3);
 
-    echo "Unigram = {$unigram} <br>";
-    echo "Bigram = {$bigram} <br>";
-    echo "Trigram = {$trigram} <br>";
+    $output = [
+        "Unigram = {$unigram} <br>",
+        "Bigram = {$bigram} <br>",
+        "Trigram = {$trigram} <br>"
+    ];
+
+    return $output;
 }
 
-printGram('Jakarta adalah ibukota negara Republik Indonesia');
+$grams = printGram('Jakarta adalah ibukota negara Republik Indonesia');
+
+foreach($grams as $gram) {
+    echo $gram;
+}
 

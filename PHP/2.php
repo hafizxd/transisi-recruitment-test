@@ -1,16 +1,16 @@
 <?php
 
-function countLowerCase($str) {
-    $arr = str_split($str);
+function countLowerCase($input) {
+    $arr = str_split($input);
     
     $count = 0;
-
     foreach ($arr as $value) {
-        if (ctype_lower($value)) $count += 1;
+        if (ctype_lower($value)) $count++;
     }
 
-    echo " \"{$str}\" mengandung {$count} buah huruf kecil.";
+    $output = " \"{$input}\" mengandung {$count} buah huruf kecil.";
+    return $output;
 }
 
-countLowerCase('TranSISI');
+echo countLowerCase('TranSISI');
 
