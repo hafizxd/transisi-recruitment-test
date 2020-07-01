@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     <div class="d-flex flex-column align-items-center">
-                        <p>
+                        <div>
                             <p>Nama: {{ $employee->name }}</p>
                             <p>Email: {{ $employee->email }}</p>
                             <p>Company: <a href="/companies/{{ $employee->company->id }}">{{ $employee->company->name }}</a></p>

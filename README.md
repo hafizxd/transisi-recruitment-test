@@ -12,3 +12,5 @@
 - php artisan migrate
 - jika hanya table user yang ingin di seed: php artisan db:seed --class=UserSeeder
 - jika semua table ingin di seed: php artisan db:seed
+- php artisan storage:link
+- php artisan serve

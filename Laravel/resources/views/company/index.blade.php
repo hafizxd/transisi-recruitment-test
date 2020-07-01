@@ -27,7 +27,11 @@
                                 <tr>
                                     <th scope="row">{{ $count++ }}</th>
                                     <td>
-                                        <img src="{{ asset('storage/company/' . $company->logo) }}" alt="logo" style="height: 30px; width: auto;">
+                                        @if ($company->logo === 'default-logo.png')
+                                            <img src="{{ asset('img/default-logo.png') }}" alt="logo" style="height: 30px; width: auto;">
+                                        @else
+                                            <img src="{{ asset('storage/company/' . $company->logo) }}" alt="logo" style="height: 30px; width: auto;">
+                                        @endif
                                     </td>
                                     <td>
                                         <a href="/companies/{{ $company->id }}">{{ $company->name }}</a>

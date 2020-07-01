@@ -9,7 +9,11 @@
 
                 <div class="card-body">
                     <div class="d-flex flex-column align-items-center">
-                        <img src="{{ asset('storage/company/' . $company->logo) }}" alt="company-logo" class="mb-5" style="width: 150px; height: auto;">
+                        @if ($company->logo === 'default-logo.png')
+                            <img src="{{ asset('img/default-logo.png') }}" alt="logo" style="width: 150px;">
+                        @else
+                            <img src="{{ asset('storage/company/' . $company->logo) }}" alt="logo" style="width: 150px;">
+                        @endif
                         <div>
                             <p>Nama: {{ $company->name }}</p>
                             <p>Email: {{ $company->email }}</p>
@@ -18,7 +22,7 @@
                                 Employee:
                                     <ul>
                                         @foreach($company->employees as $employee)
-                                            <li>{{ $employee->name }}</li>
+                                            <li><a href="/employees/{{ $employee->id }}">{{ $employee->name }}</a></li>
                                         @endforeach
                                     </ul>
                             </div>
