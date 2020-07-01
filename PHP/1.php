@@ -13,7 +13,8 @@ function mean($arr) {
     }
     
     $rata_rata = $total / count($arr);
-    return $rata_rata;
+    $output = round($rata_rata);
+    return $output;
 }
 
 
