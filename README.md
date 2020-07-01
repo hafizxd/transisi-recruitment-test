@@ -7,7 +7,7 @@
 ## Set up
 
 - composer install
-- npm install
+- npm install && npm run dev
 - setup database di .env
 - php artisan migrate
 - jika hanya table user yang ingin di seed: php artisan db:seed --class=UserSeeder
